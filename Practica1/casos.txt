@@ -1,0 +1,943 @@
+
+CASOS DE PRUEBA ----------------------------------------------------------
+
+SATISFACIBILIDAD ------------------ SATISFACIBILIDAD ----------------------- SATISFACIBILIDAD --------------------------- 
+
+01) --------------------------------------------------------------------------
+
+		Caso pequeño para pruebas rápidas
+
+D = 2;
+T = 3;
+N1 = 1;
+N2 = 1;
+N3 = 1;
+MaxDT = 2;
+MaxDL = 1;
+MinDT = 1;
+A = 0;
+afines = [|true,true,true
+          |true,true,true
+          |true,true,true|];
+R = {1, 2, 3};
+
+02) --------------------------------------------------------------------------
+
+		Caso insatisfacible por afinidad (todos en turno, coincidencias en afinidad)
+
+D = 4;
+T = 8;
+N1 = 2;
+N2 = 2;
+N3 = 4;
+MaxDT = 4;
+MaxDL = 1;
+MinDT = 2;
+A = 1;
+afines =   [|false,true,false,false,true,false,true,false
+			|true,false,true,false,true,false,false,true
+			|false,true,false,true,false,true,false,false
+			|false,false,true,false,true,false,true,false
+			|true,true,false,true,false,true,false,true
+			|false,false,true,false,true,false,true,false
+			|true,false,false,true,false,true,false,true
+			|false,true,false,false,true,false,true,false|];
+R = {1, 4, 7};
+
+03) --------------------------------------------------------------------------
+
+		Caso pequeño donde todos deben trabajar, con dos trabajadores por turno
+D = 5;
+T = 6;
+N1 = 2;
+N2 = 2;
+N3 = 2;
+MaxDT = 5;
+MaxDL = 1;
+MinDT = 2;
+A = 1;
+afines =   [|false,true,false,true,false,false
+			|true,false,true,false,true,false
+			|false,true,false,true,false,true
+			|true,false,true,false,true,false
+			|false,true,false,true,false,true
+			|false,false,true,false,true,false|];
+R = {1, 3, 5};
+
+04) --------------------------------------------------------------------------
+
+		Caso propuesto con el enunciado de la practica
+
+D = 5;
+T = 12;
+N1 = 3;
+N2 = 3;
+N3 = 4;
+MaxDT = 5;
+MaxDL = 1;
+MinDT = 3;
+A = 1;
+afines = [|false,false,true,false,true,false,false,false,true,false,false,false
+          |false,false,true,true,true,true,true,false,false,false,false,false
+          |true,true,false,false,false,false,false,true,true,true,true,true
+          |false,true,false,false,true,false,true,false,true,false,true,false
+          |true,true,false,true,false,false,false,true,true,false,false,true
+          |false,true,false,false,false,false,true,true,false,false,true,true
+          |false,true,false,true,false,true,false,false,true,true,false,false
+          |false,false,true,false,true,true,false,false,false,false,false,false
+          |true,false,true,true,true,false,true,false,false,true,true,true
+          |false,false,true,false,false,false,true,false,true,false,false,true
+          |false,false,true,true,false,true,false,false,true,false,false,false
+          |false,false,true,false,true,true,false,false,true,true,false,false|];
+R = {1,4,7,10};
+
+05) --------------------------------------------------------------------------
+
+		Caso insatisfacible más grande
+
+D = 6;
+T = 10;
+N1 = 4;
+N2 = 2;
+N3 = 4;
+MaxDT = 6;
+MaxDL = 1;
+MinDT = 2;
+A = 1;
+afines =   [|false,false,true,false,true,false,false,true,true,false
+			|false,false,true,true,true,true,true,false,false,false
+			|true,true,false,false,false,false,false,true,false,true
+			|false,true,false,false,true,false,true,false,true,false
+			|true,true,false,true,false,false,false,true,true,true
+			|false,true,false,false,false,false,true,true,false,true
+			|false,true,false,true,false,true,false,false,false,false
+			|true,false,true,false,true,true,false,false,false,true
+			|true,false,false,true,true,false,true,false,false,false
+			|false,false,true,false,true,true,false,true,false,false|];
+R = {1, 3, 6, 8};
+
+06) --------------------------------------------------------------------------
+
+		Caso extremo donde todos los encargados trabajan, el resto libra
+
+D = 7;
+T = 5;
+N1 = 1;
+N2 = 1;
+N3 = 1;
+MaxDT = 7;
+MaxDL = 7;
+MinDT = 0;
+A = 0;
+afines = [|false,true,false,true,false
+		  |true,false,true,false,true
+		  |false,true,false,true,false
+		  |true,false,true,false,true
+		  |false,true,false,true,false|];
+R = {1,3,5};
+
+07) --------------------------------------------------------------------------
+
+		Caso parecido al propuesto con solucion ajustada
+
+D = 7;
+T = 10;
+N1 = 3;
+N2 = 2;
+N3 = 4;
+MaxDT = 7;
+MaxDL = 2;
+MinDT = 2;
+A = 1;
+afines =   [|false,true,false,true,true,false,false,false,false,false
+            |true,false,true,false,true,true,false,false,false,false
+            |false,true,false,true,false,false,true,true,true,false
+            |true,false,true,false,false,true,false,true,false,true
+            |true,true,false,false,false,false,true,false,false,true
+            |false,true,false,true,false,false,true,true,true,false
+            |false,false,true,false,true,true,false,false,false,true
+            |false,false,true,true,false,true,false,false,true,false
+            |false,false,true,false,false,true,false,true,false,false
+            |false,false,false,true,true,false,true,false,false,false|];
+R = {2, 5, 8};
+
+08) --------------------------------------------------------------------------
+
+		Caso de prueba grande
+
+D = 30;
+T = 8;
+N1 = 1;
+N2 = 1;
+N3 = 1;
+MaxDT = 7;
+MaxDL = 2;
+MinDT = 8;
+A = 0;
+afines = [|false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false|];
+R = {1, 2, 3, 4, 5, 6, 7, 8};
+
+09) --------------------------------------------------------------------------
+
+		Caso grande ajustado
+
+D = 30;
+T = 10;
+N1 = 2;
+N2 = 3;
+N3 = 4;
+MaxDT = 28;
+MaxDL = 30;
+MinDT = 3;
+A = 1;
+afines = [|true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true|];
+R = {1, 3, 5, 7, 9};
+
+--------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OPTIMIZACION 1 --------------------- OPTIMIZACION 1 ------------------------- OPTIMIZACION 1 ----------------------------- 
+
+01) --------------------------------------------------------------------------
+
+		Caso pequeño para pruebas rápidas (pedir días libres no pudiendo concederlos)
+
+D = 2;
+T = 3;
+N1 = 1;
+N2 = 1;
+N3 = 1;
+MaxDT = 2;
+MaxDL = 1;
+MinDT = 1;
+A = 0;
+afines = [|true,true,true
+          |true,true,true
+          |true,true,true|];
+R = {1, 2, 3};
+peticion = [|true,true,true
+	        |true,true,true|];
+	        
+
+02) --------------------------------------------------------------------------
+
+		Caso insatisfacible por afinidad (todos en turno, coincidencias en afinidad)
+
+D = 4;
+T = 8;
+N1 = 2;
+N2 = 2;
+N3 = 4;
+MaxDT = 4;
+MaxDL = 1;
+MinDT = 2;
+A = 1;
+afines =   [|false,true,false,false,true,false,true,false
+			|true,false,true,false,true,false,false,true
+			|false,true,false,true,false,true,false,false
+			|false,false,true,false,true,false,true,false
+			|true,true,false,true,false,true,false,true
+			|false,false,true,false,true,false,true,false
+			|true,false,false,true,false,true,false,true
+			|false,true,false,false,true,false,true,false|];
+R = {1, 4, 7};
+peticion = [|false, false, false, false, false, false, false, false
+			|false, false, false, false, false, false, false, false
+			|false, false, false, false, false, false, false, false
+			|false, false, false, false, false, false, false, false|];
+
+03) --------------------------------------------------------------------------
+
+		Caso pequeño donde todos deben trabajar, con dos trabajadores por turno
+		(Modificado para que al menos 1 descanse, y así poder pedir días libres
+			--> Se añade un trabajador más)
+D = 5;
+T = 7;
+N1 = 2;
+N2 = 2;
+N3 = 2;
+MaxDT = 5;
+MaxDL = 1;
+MinDT = 2;
+A = 1;
+afines =   [|false,true,false,true,false,false,true
+			|true,false,true,false,true,false,true
+			|false,true,false,true,false,true,true
+			|true,false,true,false,true,false,true
+			|false,true,false,true,false,true,true
+			|false,false,true,false,true,false,true
+			|true,true,true,true,true,true,true|];
+R = {1, 3, 5};
+peticion = [|false,true,false,false,false,false,false
+            |true,false,false,false,false,false,false
+            |false,false,false,false,false,false,false
+            |false,false,false,false,false,false,false
+            |false,false,false,false,false,false,false|];
+
+peticion = [|false,false,false,false,false,false,false
+            |true,false,false,false,false,false,false
+            |false,true,false,false,false,false,false
+            |false,false,false,true,false,false,false
+            |false,false,false,false,true,false,false|];
+
+
+04) --------------------------------------------------------------------------
+
+		Caso propuesto con el enunciado de la practica
+
+D = 5;
+T = 12;
+N1 = 3;
+N2 = 3;
+N3 = 4;
+MaxDT = 5;
+MaxDL = 1;
+MinDT = 3;
+A = 1;
+afines = [|false,false,true,false,true,false,false,false,true,false,false,false
+          |false,false,true,true,true,true,true,false,false,false,false,false
+          |true,true,false,false,false,false,false,true,true,true,true,true
+          |false,true,false,false,true,false,true,false,true,false,true,false
+          |true,true,false,true,false,false,false,true,true,false,false,true
+          |false,true,false,false,false,false,true,true,false,false,true,true
+          |false,true,false,true,false,true,false,false,true,true,false,false
+          |false,false,true,false,true,true,false,false,false,false,false,false
+          |true,false,true,true,true,false,true,false,false,true,true,true
+          |false,false,true,false,false,false,true,false,true,false,false,true
+          |false,false,true,true,false,true,false,false,true,false,false,false
+          |false,false,true,false,true,true,false,false,true,true,false,false|];
+R = {1,4,7,10};
+peticion = [|false,true,true,false,false,false,false,false,false,false,false,false
+            |false,true,true,false,false,false,false,false,false,false,false,false
+            |false,true,true,false,false,false,false,false,false,false,false,false
+            |false,true,true,false,false,false,false,false,false,false,false,false
+            |false,true,false,false,false,false,false,false,false,false,false,false|];
+
+peticion = [|true,false,false,false,false,false,false,false,false,false,false,false
+            |false,false,true,false,false,false,false,false,false,false,false,false
+            |false,false,false,false,true,false,false,false,false,false,false,false
+            |false,false,false,false,false,false,true,false,false,false,false,false
+            |false,false,false,false,false,false,false,false,true,false,false,false|];
+
+
+05) --------------------------------------------------------------------------
+
+		Caso insatisfacible más grande
+
+D = 6;
+T = 10;
+N1 = 4;
+N2 = 2;
+N3 = 4;
+MaxDT = 6;
+MaxDL = 1;
+MinDT = 2;
+A = 1;
+afines =   [|false,false,true,false,true,false,false,true,true,false
+			|false,false,true,true,true,true,true,false,false,false
+			|true,true,false,false,false,false,false,true,false,true
+			|false,true,false,false,true,false,true,false,true,false
+			|true,true,false,true,false,false,false,true,true,true
+			|false,true,false,false,false,false,true,true,false,true
+			|false,true,false,true,false,true,false,false,false,false
+			|true,false,true,false,true,true,false,false,false,true
+			|true,false,false,true,true,false,true,false,false,false
+			|false,false,true,false,true,true,false,true,false,false|];
+R = {1, 3, 6, 8};
+peticion = [|false,false,false,false,false,false,false,false,false,false
+			|false,false,false,false,false,false,false,false,false,false
+			|false,false,false,false,false,false,false,false,false,false
+			|false,false,false,false,false,false,false,false,false,false
+			|false,false,false,false,false,false,false,false,false,false
+			|false,false,false,false,false,false,false,false,false,false|];
+
+06) --------------------------------------------------------------------------
+
+		Caso extremo donde todos los encargados trabajan, el resto libra
+		(Modificado para que los encargados puedan descansar
+			--> Añadido un encargado)
+
+D = 7;
+T = 5;
+N1 = 1;
+N2 = 1;
+N3 = 1;
+MaxDT = 7;
+MaxDL = 7;
+MinDT = 0;
+A = 0;
+afines = [|false,true,false,true,false
+		  |true,false,true,false,true
+		  |false,true,false,true,false
+		  |true,false,true,false,true
+		  |false,true,false,true,false|];
+R = {1,2,3,5};
+peticion = [|true,false,false,false,false
+            |false,true,false,false,false
+            |false,false,false,false,false
+            |false,false,false,false,false
+            |false,false,false,false,false
+            |false,false,true,false,false
+            |false,false,false,false,true|];
+
+
+07) --------------------------------------------------------------------------
+
+		Caso parecido al propuesto con solucion ajustada
+
+D = 7;
+T = 10;
+N1 = 3;
+N2 = 2;
+N3 = 4;
+MaxDT = 7;
+MaxDL = 2;
+MinDT = 2;
+A = 1;
+afines =   [|false,true,false,true,true,false,false,false,false,false
+            |true,false,true,false,true,true,false,false,false,false
+            |false,true,false,true,false,false,true,true,true,false
+            |true,false,true,false,false,true,false,true,false,true
+            |true,true,false,false,false,false,true,false,false,true
+            |false,true,false,true,false,false,true,true,true,false
+            |false,false,true,false,true,true,false,false,false,true
+            |false,false,true,true,false,true,false,false,true,false
+            |false,false,true,false,false,true,false,true,false,false
+            |false,false,false,true,true,false,true,false,false,false|];
+R = {2, 5, 8};
+peticion = [|true,false,false,false,false,false,false,false,false,false
+            |false,false,true,false,false,false,false,false,false,false
+            |false,false,false,false,false,false,false,false,false,false
+            |false,false,false,false,false,false,false,false,false,false
+            |false,false,false,false,true,false,false,false,false,false
+            |false,false,false,false,false,false,false,false,false,false
+            |false,false,false,false,false,false,false,false,false,true|];
+
+
+08) --------------------------------------------------------------------------
+
+		Caso de prueba grande
+
+D = 30;
+T = 8;
+N1 = 1;
+N2 = 1;
+N3 = 1;
+MaxDT = 7;
+MaxDL = 2;
+MinDT = 8;
+A = 0;
+afines = [|false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false|];
+R = {1, 2, 3, 4, 5, 6, 7, 8};
+peticion = [|true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false
+            |true,false,false,true,false,false,false,false|];
+            
+
+
+09) --------------------------------------------------------------------------
+
+		Caso grande ajustado
+
+D = 30;
+T = 10;
+N1 = 2;
+N2 = 3;
+N3 = 4;
+MaxDT = 28;
+MaxDL = 30;
+MinDT = 3;
+A = 1;
+afines = [|true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true|];
+R = {1, 3, 5, 7, 9};
+peticion = [|true,false,false,false,false,false,false,false,false,false
+            |false,true,false,false,false,false,false,false,false,false
+            |false,false,true,false,false,false,false,false,false,false
+            |false,false,false,true,false,false,false,false,false,false
+            |false,false,false,false,true,false,false,false,false,false
+            |false,false,false,false,false,true,false,false,false,false
+            |false,false,false,false,false,false,true,false,false,false
+            |false,false,false,false,false,false,false,true,false,false
+            |false,false,false,false,false,false,false,false,true,false
+            |false,false,false,false,false,false,false,false,false,true
+            |false,false,false,false,false,false,false,false,true,false
+            |false,false,false,false,false,false,false,true,false,false
+            |false,false,false,false,false,false,true,false,false,false
+            |false,false,false,false,false,true,false,false,false,false
+            |false,false,false,false,true,false,false,false,false,false
+            |false,false,false,true,false,false,false,false,false,false
+            |false,false,true,false,false,false,false,false,false,false
+            |false,true,false,false,false,false,false,false,false,false
+            |true,false,false,false,false,false,false,false,false,false
+            |false,true,false,false,false,false,false,false,false,false
+            |false,false,true,false,false,false,false,false,false,false
+            |false,false,false,true,false,false,false,false,false,false
+            |false,false,true,false,false,false,false,false,false,false
+            |false,true,false,false,false,false,false,false,false,false
+            |true,false,false,false,false,false,false,false,false,false
+            |false,true,false,false,false,false,false,false,false,false
+            |false,false,true,false,false,false,false,false,false,false
+            |false,false,false,true,false,false,false,false,false,false
+            |false,false,false,false,true,false,false,false,false,false
+            |false,false,false,false,false,true,false,false,false,false|];
+
+--------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OPTIMIZACION 2 --------------------- OPTIMIZACION 2 ------------------------- OPTIMIZACION 2 ----------------------------- 
+
+01) --------------------------------------------------------------------------
+
+		Caso pequeño para pruebas rápidas (pedir días libres no pudiendo concederlos)
+
+D = 2;
+T = 3;
+N1 = 1;
+N2 = 1;
+N3 = 1;
+MaxDT = 2;
+MaxDL = 1;
+MinDT = 1;
+A = 0;
+afines = [|true,true,true
+          |true,true,true
+          |true,true,true|];
+R = {1, 2, 3};
+peticion = [|1,2,3
+	        |3,2,1|];
+
+peticion = [|1, 2, 3
+			|1, 2, 3|];
+
+
+02) --------------------------------------------------------------------------
+
+		Caso insatisfacible por afinidad (todos en turno, coincidencias en afinidad)
+
+D = 4;
+T = 8;
+N1 = 2;
+N2 = 2;
+N3 = 4;
+MaxDT = 4;
+MaxDL = 1;
+MinDT = 2;
+A = 1;
+afines =   [|false,true,false,false,true,false,true,false
+			|true,false,true,false,true,false,false,true
+			|false,true,false,true,false,true,false,false
+			|false,false,true,false,true,false,true,false
+			|true,true,false,true,false,true,false,true
+			|false,false,true,false,true,false,true,false
+			|true,false,false,true,false,true,false,true
+			|false,true,false,false,true,false,true,false|];
+R = {1, 4, 7};
+peticion = [|0, 2, 0, 1, 0, 0, 0, 0             
+			|0, 0, 0, 0, 0, 0, 0, 0             
+			|0, 0, 3, 0, 0, 0, 0, 0             
+			|0, 0, 0, 0, 0, 0, 0, 0|];
+
+
+03) --------------------------------------------------------------------------
+
+		Caso pequeño donde todos deben trabajar, con dos trabajadores por turno
+		(Modificado para que al menos 1 descanse, y así poder pedir días libres
+			--> Se añade un trabajador más)
+D = 5;
+T = 7;
+N1 = 2;
+N2 = 2;
+N3 = 2;
+MaxDT = 5;
+MaxDL = 1;
+MinDT = 2;
+A = 1;
+afines =   [|false,true,false,true,false,false,true
+			|true,false,true,false,true,false,true
+			|false,true,false,true,false,true,true
+			|true,false,true,false,true,false,true
+			|false,true,false,true,false,true,true
+			|false,false,true,false,true,false,true
+			|true,true,true,true,true,true,true|];
+R = {1, 3, 5};
+peticion = [|1, 1, 1, 1, 0, 0, 0             
+			|0, 0, 0, 2, 2, 2, 2             
+			|3, 3, 3, 0, 0, 0, 0             
+			|0, 0, 0, 0, 3, 3, 3             
+			|0, 0, 0, 0, 0, 0, 0|];
+
+peticion = [|3, 2, 2, 1, 2, 3, 3             
+			|3, 2, 2, 1, 2, 3, 3             
+			|3, 2, 2, 1, 2, 3, 3             
+			|3, 2, 2, 1, 2, 3, 3             
+			|3, 2, 2, 1, 2, 3, 3|];
+
+
+
+04) --------------------------------------------------------------------------
+
+		Caso propuesto con el enunciado de la practica
+
+D = 5;
+T = 12;
+N1 = 3;
+N2 = 3;
+N3 = 4;
+MaxDT = 5;
+MaxDL = 1;
+MinDT = 3;
+A = 1;
+afines = [|false,false,true,false,true,false,false,false,true,false,false,false
+          |false,false,true,true,true,true,true,false,false,false,false,false
+          |true,true,false,false,false,false,false,true,true,true,true,true
+          |false,true,false,false,true,false,true,false,true,false,true,false
+          |true,true,false,true,false,false,false,true,true,false,false,true
+          |false,true,false,false,false,false,true,true,false,false,true,true
+          |false,true,false,true,false,true,false,false,true,true,false,false
+          |false,false,true,false,true,true,false,false,false,false,false,false
+          |true,false,true,true,true,false,true,false,false,true,true,true
+          |false,false,true,false,false,false,true,false,true,false,false,true
+          |false,false,true,true,false,true,false,false,true,false,false,false
+          |false,false,true,false,true,true,false,false,true,true,false,false|];
+R = {1,4,7,10};
+peticion = [|1,2,3,1,2,3,0,0,0,0,0,0
+            |2,2,0,0,0,0,0,0,0,0,0,0
+            |3,2,0,0,0,0,0,0,0,0,0,0
+            |2,2,3,3,0,0,0,0,0,0,0,0
+            |1,2,0,0,0,0,0,0,0,0,0,0|];
+
+peticion = [|3, 2, 2, 1, 1, 3, 1, 2, 3, 3, 2, 1             
+			|3, 2, 2, 1, 1, 3, 1, 2, 3, 3, 2, 1             
+			|3, 2, 2, 1, 1, 3, 1, 2, 3, 3, 2, 1             
+			|3, 2, 2, 1, 1, 3, 1, 2, 3, 3, 2, 1             
+			|3, 2, 2, 1, 1, 3, 1, 2, 3, 3, 2, 1|];
+
+05) --------------------------------------------------------------------------
+
+		Caso insatisfacible más grande
+
+D = 6;
+T = 10;
+N1 = 4;
+N2 = 2;
+N3 = 4;
+MaxDT = 6;
+MaxDL = 1;
+MinDT = 2;
+A = 1;
+afines =   [|false,false,true,false,true,false,false,true,true,false
+			|false,false,true,true,true,true,true,false,false,false
+			|true,true,false,false,false,false,false,true,false,true
+			|false,true,false,false,true,false,true,false,true,false
+			|true,true,false,true,false,false,false,true,true,true
+			|false,true,false,false,false,false,true,true,false,true
+			|false,true,false,true,false,true,false,false,false,false
+			|true,false,true,false,true,true,false,false,false,true
+			|true,false,false,true,true,false,true,false,false,false
+			|false,false,true,false,true,true,false,true,false,false|];
+R = {1, 3, 6, 8};
+petición = [|0, 1, 0, 2, 0, 0, 0, 0, 0, 0             
+			|0, 0, 0, 0, 0, 0, 0, 0, 0, 0             
+			|0, 0, 0, 0, 0, 0, 0, 0, 0, 0             
+			|0, 0, 0, 0, 0, 0, 0, 0, 0, 0             
+			|0, 0, 0, 0, 0, 0, 0, 0, 0, 0             
+			|0, 0, 0, 0, 0, 0, 0, 0, 0, 0|];
+
+
+06) --------------------------------------------------------------------------
+
+		Caso extremo donde todos los encargados trabajan, el resto libra
+		(Modificado para que los encargados puedan descansar
+			--> Añadido un encargado)
+
+D = 7;
+T = 5;
+N1 = 1;
+N2 = 1;
+N3 = 1;
+MaxDT = 7;
+MaxDL = 7;
+MinDT = 0;
+A = 0;
+afines = [|false,true,false,true,false
+		  |true,false,true,false,true
+		  |false,true,false,true,false
+		  |true,false,true,false,true
+		  |false,true,false,true,false|];
+R = {1,2,3,5};
+peticion = [|1, 2, 3, 0, 1             
+			|1, 2, 0, 3, 0             
+			|1, 2, 3, 0, 0             
+			|1, 2, 0, 3, 0             
+			|1, 2, 3, 0, 0             
+			|1, 2, 0, 3, 0             
+			|1, 2, 3, 0, 1|];
+
+peticion = [|1, 2, 3, 2, 1             
+			|1, 2, 3, 2, 1             
+			|1, 2, 3, 2, 1             
+			|1, 2, 3, 2, 1             
+			|1, 2, 3, 2, 1             
+			|1, 2, 3, 2, 1             
+			|1, 2, 3, 2, 1|];
+
+07) --------------------------------------------------------------------------
+
+		Caso parecido al propuesto con solucion ajustada
+
+D = 7;
+T = 10;
+N1 = 3;
+N2 = 2;
+N3 = 4;
+MaxDT = 7;
+MaxDL = 2;
+MinDT = 2;
+A = 1;
+afines =   [|false,true,false,true,true,false,false,false,false,false
+            |true,false,true,false,true,true,false,false,false,false
+            |false,true,false,true,false,false,true,true,true,false
+            |true,false,true,false,false,true,false,true,false,true
+            |true,true,false,false,false,false,true,false,false,true
+            |false,true,false,true,false,false,true,true,true,false
+            |false,false,true,false,true,true,false,false,false,true
+            |false,false,true,true,false,true,false,false,true,false
+            |false,false,true,false,false,true,false,true,false,false
+            |false,false,false,true,true,false,true,false,false,false|];
+R = {2, 5, 8};
+peticion = [|1, 2, 3, 1, 2, 3, 1, 2, 3, 1             
+			|0, 0, 0, 0, 0, 0, 0, 0, 0, 0             
+			|0, 0, 0, 0, 0, 0, 0, 0, 0, 0             
+			|3, 1, 2, 3, 1, 2, 3, 1, 2, 3             
+			|0, 0, 0, 0, 0, 0, 0, 0, 0, 0             
+			|0, 0, 0, 0, 0, 0, 0, 0, 0, 0             
+			|2, 3, 1, 2, 3, 1, 2, 3, 1, 2|];
+
+peticion = [|1, 1, 2, 2, 2, 3, 3, 1, 2, 3             
+			|1, 1, 2, 2, 2, 3, 3, 1, 2, 3             
+			|1, 1, 2, 2, 2, 3, 3, 1, 2, 3             
+			|1, 1, 2, 2, 2, 3, 3, 1, 2, 3             
+			|1, 1, 2, 2, 2, 3, 3, 1, 2, 3             
+			|1, 1, 2, 2, 2, 3, 3, 1, 2, 3             
+			|1, 1, 2, 2, 2, 3, 3, 1, 2, 3|];
+
+
+
+08) --------------------------------------------------------------------------
+
+		Caso de prueba grande
+
+D = 30;
+T = 8;
+N1 = 1;
+N2 = 1;
+N3 = 1;
+MaxDT = 7;
+MaxDL = 2;
+MinDT = 8;
+A = 0;
+afines = [|false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false
+          |false,false,false,false,false,false,false,false|];
+R = {1, 2, 3, 4, 5, 6, 7, 8};
+peticion = [|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3
+			|3,2,1,0,0,1,2,3|];
+            
+
+
+09) --------------------------------------------------------------------------
+
+		Caso grande ajustado
+
+D = 30;
+T = 10;
+N1 = 2;
+N2 = 3;
+N3 = 4;
+MaxDT = 28;
+MaxDL = 30;
+MinDT = 3;
+A = 1;
+afines = [|true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true
+          |true,true,true,true,true,true,true,true,true,true|];
+R = {1, 3, 5, 7, 9};
+peticion = [|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0
+			|1,2,3,0,0,0,0,0,0,0 
+			|1,2,3,0,0,0,0,0,0,0|]; 
+
+
+--------------------------------------------------------------------------
+
+
+
+
+
